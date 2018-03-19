@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <input type="text" #serverName>
+      <button class="btn btn-primary" (click)="getnew()">Add Server</button>
+      <hr>
+      <ul class="list-group" *ngFor="let server of servers">
+       <!-- <li class="list-group-item">{{ server.name }} (ID: {{ server.id }})</li>-->
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <h2>List JSON123</h2>
+  <!-- {{postlist|async|json}} -->
+
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+      <h2>Student List</h2>
+
+      <table class="table">
+          <tr>
+              <th>Sr.No.</th>
+              <th>product_id</th>
+              <th>vendor_price</th>
+              <th>product_thumbnail_image</th>
+          </tr>
+          <tr *ngFor="let item Of data; let rowNumber=index">
+              <td>{{rowNumber+1}}</td>
+              <td>{{item.product_id}}</td>
+              <td>{{item.vendor_price}}</td>
+
+             <!-- <td>assets/images/products/thumbs/{{product_thumbnail_image}}</td>
+             -->
+             <td><img src="./assets/images/products/{{item.product_thumbnail_image}}" alt="Nirmooha" class="img-responsive nirmoha-logo-img"/>
+</td>
+              
+              <!--<td>{{item.username}}</td> product_thumbnail_image
+              <td>{{item.password}}</td>-->
+              <!--<td> <a routerLink="/student/{{item.userid}}" routerLinkActive="active">Edit</a></td>-->
+          </tr>
+      </table>
+
+  </div>
+
+</div>
+
+<h2>get data</h2>
+
+
+<table class="table">
+  <tr>
+      <th>Sr.No.</th>
+      <th>product_id</th>
+      <th>vendor_price</th>
+      <th>product_thumbnail_image</th>
+  </tr>
+  <tr *ngFor="let item Of datanew; let rowNumber=index">
+      <td>{{rowNumber+1}}</td>
+      <td>{{item.product_id}}</td>
+      <td>{{item.vendor_price}}</td>
+
+     <!-- <td>assets/images/products/thumbs/{{product_thumbnail_image}}</td>
+     -->
+     <td><img src="./assets/images/products/{{item.product_thumbnail_image}}" alt="Nirmooha" class="img-responsive nirmoha-logo-img"/>
+</td>
+      
+      <!--<td>{{item.username}}</td> product_thumbnail_image
+      <td>{{item.password}}</td>-->
+      <!--<td> <a routerLink="/student/{{item.userid}}" routerLinkActive="active">Edit</a></td>-->
+  </tr>
+</table>
+
